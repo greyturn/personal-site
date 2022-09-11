@@ -1,5 +1,5 @@
 {
-  "name": "nextjs",
+  "name": "personal-website",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -14,7 +14,12 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "@types/node": "^16.11.7",
+    "@types/react": "18.0.19",
+    "@types/react-dom": "18.0.6",
     "eslint": "8.23.0",
-    "eslint-config-next": "12.3.0"
+    "eslint-config-next": "12.3.0",
+    "prettier": "^2.7.1",
+    "typescript": "4.8.3"
   }
 }
