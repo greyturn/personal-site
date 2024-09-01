@@ -8,7 +8,7 @@ export const metaData: Metadata = {
 
 type Props = {};
 
-function Home({}: Props) {
+function Page({}: Props) {
     return (
         <div>
             <main>
@@ -18,4 +18,4 @@ function Home({}: Props) {
     );
 }
 
-export default Home;
+export default Page;
