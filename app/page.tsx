@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import Head from 'next/head';
 
 export const metaData: Metadata = {
     title: 'Graeme Turney | Homepage',
@@ -8,7 +7,7 @@ export const metaData: Metadata = {
 
 type Props = {};
 
-function Page({}: Props) {
+export default function Page({}: Props) {
     return (
         <div>
             <main>
@@ -17,5 +16,3 @@ function Page({}: Props) {
         </div>
     );
 }
-
-export default Page;
