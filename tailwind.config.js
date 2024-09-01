@@ -6,7 +6,7 @@ module.exports = {
         './components/**/*.{js,ts,jsx,tsx,mdx}',
     ],
     theme: {
-      fontFamily: {sans: ['Ubuntu', 'sans-serif'], serif: ['serif']},
+        fontFamily: { sans: ['Ubuntu', 'sans-serif'], serif: ['serif'] },
         extend: {},
     },
     plugins: [],
