@@ -1,9 +1,9 @@
 import { Metadata } from 'next';
 
-export const metaData: Metadata = {
+/* export const metaData: Metadata = {
     title: 'Graeme Turney | Homepage',
     description: 'Homepage of Graeme Turney website',
-};
+}; */
 
 type Props = {};
 
