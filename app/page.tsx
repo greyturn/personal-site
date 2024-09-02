@@ -9,10 +9,8 @@ type Props = {};
 
 export default function Page({}: Props) {
     return (
-        <div>
-            <main>
-                <h1>Graeme Turney</h1>
-            </main>
-        </div>
+        <main>
+            <h1 className='font-sans'>Graeme Turney</h1>
+        </main>
     );
 }

@@ -1,11 +1,21 @@
+'use client';
+
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
 
 type Props = {
     className?: string;
 };
 
 function Footer({ className }: Props) {
+    const [vercelSrc, setVercelSrc] = useState('/vercel-dark.svg');
     const year = new Date().getFullYear();
+
+    useEffect(() => {
+        if (window && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            setVercelSrc('/vercel-light.svg');
+        }
+    }, []);
 
     return (
         <footer className={className}>
@@ -15,10 +25,10 @@ function Footer({ className }: Props) {
                     target='_blank'
                     rel='noopener noreferrer'
                 >
-                    Powered by{' '}
-                    <span>
-                        <Image src='/vercel.svg' alt='Vercel Logo' width={72} height={16} />
-                    </span>
+                    <div className='flex'>
+                        <span className='pr-1'>Powered by </span>
+                        <Image src={vercelSrc} alt='Vercel Logo' width={72} height={16} />
+                    </div>
                 </a>
                 <div>
                     <span>{`Copyright © Graeme Turney ${year}`}</span>

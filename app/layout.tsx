@@ -1,5 +1,8 @@
 import type { Metadata } from 'next';
-import Head from 'next/head';
+import { Ubuntu } from 'next/font/google';
+
+import '../global.css';
+
 import Footer from '../components/Footer';
 
 export const metadata: Metadata = {
@@ -10,13 +13,17 @@ export const metadata: Metadata = {
     },
 };
 
+const ubuntu = Ubuntu({
+    weight: ['300', '400', '500', '700'],
+    subsets: ['latin'],
+    display: 'swap',
+    style: ['normal', 'italic'],
+});
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
-        <html lang='en'>
-            <Head>
-                <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600;700;800' />
-            </Head>
-            <body>
+        <html lang='en' className={ubuntu.className}>
+            <body className='bg-slate-100 dark:bg-gray-900 text-gray-900 dark:text-slate-100'>
                 {children}
                 <Footer />
             </body>
