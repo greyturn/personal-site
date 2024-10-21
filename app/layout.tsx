@@ -23,8 +23,8 @@ const ubuntu = Ubuntu({
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang='en' className={ubuntu.className}>
-            <body className='bg-slate-100 dark:bg-gray-900 text-gray-900 dark:text-slate-100'>
-                {children}
+            <body className='bg-slate-100 dark:bg-indigo-900 text-gray-900 dark:text-slate-100'>
+                <div className='flex p-6 justify-center'>{children}</div>
                 <Footer />
             </body>
         </html>
