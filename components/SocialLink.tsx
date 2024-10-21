@@ -14,7 +14,7 @@ function getIcon(social: Social) {
         case 'github':
             return '/github-mark-white.svg';
         case 'linkedin':
-            return '/LI-in-Bug.png';
+            return '/LI-In-Bug.png';
     }
 }
 
