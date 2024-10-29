@@ -33,7 +33,7 @@ export default function SocialLink({ className, social, text }: Props) {
 
     return (
         <div className={twMerge('flex', className)}>
-            <Image className='mr-4' src={icon} width={36} height={36} alt={`${social} logo`} />
+            <Image className='mr-4' src={icon} width={32} height={32} alt={`${social} logo`} />
             <a className='hover:text-indigo-400 self-center' href={link}>{text}</a>
         </div>
     );
