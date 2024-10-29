@@ -40,10 +40,10 @@ function usePrefersDarkMode() {
 }
 
 export function useDarkMode() {
-    const [darkMode, setDarkMode] = useSafeLocalStorage('darkMode', 'dark');
+    const [isEnabled, setIsEnabled] = useSafeLocalStorage('darkMode', 'dark');
     const prefersDarkMode = usePrefersDarkMode();
 
-    const enabled = darkMode === undefined ? prefersDarkMode : darkMode;
+    const enabled = setIsEnabled === undefined ? prefersDarkMode : isEnabled;
 
     useEffect(() => {
         if (window === undefined) {
@@ -54,10 +54,9 @@ export function useDarkMode() {
         if (enabled) {
             root.classList.add('dark');
         } else {
-            root.classList.remove('dark')
+            root.classList.remove('dark');
         }
-        
     }, [enabled]);
 
-    return { enabled, setDarkMode };
+    return { enabled, setIsEnabled };
 }

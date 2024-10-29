@@ -9,13 +9,13 @@ interface Props {
 }
 
 export function DarkModeButton({ className }: Props) {
-    const { enabled, setDarkMode } = useDarkMode();
+    const { enabled, setIsEnabled } = useDarkMode();
 
     return (
         <button
             className={twMerge(className, 'bg-indigo-800 dark:bg-indigo-300 rounded p-1')}
             onClick={() => {
-                setDarkMode(enabled === 'dark' ? 'light' : 'dark');
+                setIsEnabled(enabled ? false : true);
             }}
         >
             <Image src='/dark-mode.png' alt='dark mode toggle' width={32} height={32} />
