@@ -6,19 +6,24 @@ import { twMerge } from 'tailwind-merge';
 
 import Card from './Card';
 
+import { useDarkMode } from '../hooks/useDarkMode';
+
 type Props = {
     className?: string;
 };
 
 function Footer({ className }: Props) {
     const [vercelSrc, setVercelSrc] = useState('/vercel-dark.svg');
+    const { enabled } = useDarkMode();
     const year = new Date().getFullYear();
 
     useEffect(() => {
-        if (window && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        if (enabled) {
             setVercelSrc('/vercel-light.svg');
+        } else {
+            setVercelSrc('/vercel-dark.svg');
         }
-    }, []);
+    }, [enabled]);
 
     return (
         <footer className={twMerge('absolute left-0 bottom-0 p-1', className)}>

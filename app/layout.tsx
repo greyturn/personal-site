@@ -1,9 +1,11 @@
 import type { Metadata } from 'next';
 import { Ubuntu } from 'next/font/google';
+import { twMerge } from 'tailwind-merge';
 
 import '../global.css';
 
 import Footer from '../components/Footer';
+import { DarkModeButton } from '../components/DarkModeButton';
 
 export const metadata: Metadata = {
     title: 'Graeme Turney',
@@ -22,8 +24,9 @@ const ubuntu = Ubuntu({
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
-        <html lang='en' className={ubuntu.className}>
-            <body className='bg-slate-100 dark:bg-indigo-900 text-gray-900 dark:text-slate-100'>
+        <html lang='en' className={twMerge(ubuntu.className)}>
+            <body className='min-h-dvh bg-gradient-to-br from-indigo-800 dark:to-slate-900 to-slate-200 text-gray-900 dark:text-slate-100'>
+                <DarkModeButton className='top-0 right-0 absolute m-4' />
                 <div className='flex p-6 justify-center'>{children}</div>
                 <Footer />
             </body>
