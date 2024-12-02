@@ -8,7 +8,9 @@ module.exports = {
     darkMode: 'selector',
     theme: {
         fontFamily: { sans: ['Ubuntu', 'sans-serif'], serif: ['serif'] },
-        extend: {},
+        extend: {colors: {
+            'react-blue': '#58c4dc',
+        }},
     },
     plugins: [],
 };

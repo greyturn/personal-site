@@ -27,23 +27,21 @@ function Footer({ className }: Props) {
 
     return (
         <footer className={twMerge('absolute left-0 bottom-0 p-1', className)}>
-            <div>
-                <Card>
-                    <a
-                        href='https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
-                        target='_blank'
-                        rel='noopener noreferrer'
-                    >
-                        <div className='flex'>
-                            <span className='pr-1'>Powered by </span>
-                            <Image src={vercelSrc} alt='Vercel Logo' width={72} height={16} />
-                        </div>
-                    </a>
-                    <div>
-                        <span>{`Copyright © Graeme Turney ${year}`}</span>
+            <Card className='m-5'>
+                <a
+                    href='https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                >
+                    <div className='flex'>
+                        <span className='pr-1'>Powered by </span>
+                        <Image src={vercelSrc} alt='Vercel Logo' width={72} height={16} />
                     </div>
-                </Card>
-            </div>
+                </a>
+                <div>
+                    <span>{`Copyright © Graeme Turney ${year}`}</span>
+                </div>
+            </Card>
         </footer>
     );
 }
