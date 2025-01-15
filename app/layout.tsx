@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react"
 import type { Metadata } from 'next';
 import { Ubuntu } from 'next/font/google';
 import { twMerge } from 'tailwind-merge';
@@ -29,6 +30,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <DarkModeButton className='top-0 right-0 absolute m-4' />
                 <div className='flex p-6 justify-center'>{children}</div>
                 <Footer />
+                <Analytics />
             </body>
         </html>
     );
