@@ -18,7 +18,7 @@ export default function Page({}: Props) {
                 <h1>Graeme Turney</h1>
                 <h2 className='text-xl mt-2'> A Web Developer</h2>
             </Card>
-            <Card className='my-4'>Currently living in Coquitlam BC.</Card>
+            <Card className='my-4'>Currently living in Victoria BC.</Card>
             <Card className='my-4'>
                 <h2 className='mb-6'>Socials:</h2>
                 <SocialLink className='mb-4' social='github' text='Github' />
